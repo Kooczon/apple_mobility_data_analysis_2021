@@ -5,7 +5,7 @@ kooczon@dons.usfca.edu
 
 The aim of this project is to analyze the mobility data made available by Apple.
 
-That data is available from the following URL:
+That data is available for download the following URL:
 https://covid19.apple.com/mobility
 
 ### Change Log
