@@ -6,14 +6,12 @@
 # kooczon@dons.usfca.edu
 # September 26, 2021
 
+
 #load the package "dplyr"
 library("dplyr")
 
 # create a function where we take the subset of any state and have their data
 # tallied based on cities and counties by their transportation type
-
-#testing variables for the function
-input_file_name <- "output/applemobilitytrends-2021-09-18_Mississippi.csv"
 
 tally_cities_counties_of_state <- function(input_file_name) {
   # read in csv file of the subsetted state data
@@ -21,17 +19,19 @@ tally_cities_counties_of_state <- function(input_file_name) {
 
   #use dplyr to take the cities, counties, and types of transportation
   # in a chain
-  count_cities_counties_of_state <- state_data %<%
+  count_cities_counties_by_type <- state_data %>%
     select(geo_type, region, transportation_type) %>%
-    group_by(geo_type, transportation_type) %<%
+    group_by(geo_type, transportation_type) %>%
     tally()
 
   #write csv file of the dplyr chain
-  write.csv(count_cities_counties_of_state,
+  write.csv(count_cities_counties_by_type,
             file = paste0("output/",
                           tools::file_path_sans_ext(
                             basename(input_file_name)),
-                          "cities_counties.csv"))
+                          "_cities_counties.csv"))
 }
 
 #testing out the function
+tally_cities_counties_of_state( "output/applemobilitytrends-2021-09-18_Montana.csv")
+
