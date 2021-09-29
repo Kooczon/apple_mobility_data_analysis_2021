@@ -27,3 +27,17 @@ count_cities_counties_by_type <- state_data %>%
 # write out the result of the dplyr chain
 write.csv(count_of_cities_counties_by_transportation_type,
           "output/mississippi_cities_counties_counts.csv")
+
+#load functions
+source("code/functions/tally_cities_counties_of_state.R")
+
+#test out the function
+tally_cities_counties_of_state("output/applemobilitytrends-2021-09-18_Arizona.csv")
+
+# Testing a for loop of this function
+for (subsetted_state in c("Arizona", "Florida", "Montana", "Utah",
+                          "Georgia")) {
+  tally_cities_counties_of_state(input_file_name =
+                                   "output/applemobilitytrends-2021-09-18_Arizona.csv")
+}
+list.files("output/")

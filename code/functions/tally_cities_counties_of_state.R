@@ -32,6 +32,4 @@ tally_cities_counties_of_state <- function(input_file_name) {
                           "_cities_counties.csv"))
 }
 
-#testing out the function
-tally_cities_counties_of_state( "output/applemobilitytrends-2021-09-18_Montana.csv")
 
