@@ -19,6 +19,9 @@ source("code/functions/tally_cities_counties_of_state.R")
 for (subsetted_state in c("Arizona", "Florida", "Montana", "Utah",
                           "Georgia")) {
   tally_cities_counties_of_state(input_file_name =
-                                   "output/applemobilitytrends-2021-09-18_Arizona.csv")
+                                   paste0("output/subsetted_state/",
+                                   "applemobilitytrends-2021-09-18_",
+                                   subsetted_state,
+                                    ".csv"))
 }
 list.files("output/")

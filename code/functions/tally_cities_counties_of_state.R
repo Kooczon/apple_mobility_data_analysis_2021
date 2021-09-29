@@ -26,7 +26,7 @@ tally_cities_counties_of_state <- function(input_file_name) {
 
   #write csv file of the dplyr chain
   write.csv(count_cities_counties_by_type,
-            file = paste0("output/",
+            file = paste0("output/tally_cities_counties_of_state/",
                           tools::file_path_sans_ext(
                             basename(input_file_name)),
                           "_cities_counties.csv"))
