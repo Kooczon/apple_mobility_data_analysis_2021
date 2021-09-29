@@ -24,6 +24,10 @@ tally_cities_counties_of_state <- function(input_file_name) {
     group_by(geo_type, transportation_type) %>%
     tally()
 
+  # check that the tally data actually has data in it
+  if (nrow(count_cities_counties_by_type) == 0) {
+    stop("ERROR: No rows detected. Did you make a mistake?")
+  }
   #write csv file of the dplyr chain
   write.csv(count_cities_counties_by_type,
             file = paste0("output/tally_cities_counties_of_state/",
@@ -31,5 +35,3 @@ tally_cities_counties_of_state <- function(input_file_name) {
                             basename(input_file_name)),
                           "_cities_counties.csv"))
 }
-
-
