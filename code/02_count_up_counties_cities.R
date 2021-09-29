@@ -24,4 +24,3 @@ for (subsetted_state in c("Arizona", "Florida", "Montana", "Utah",
                                    subsetted_state,
                                     ".csv"))
 }
-list.files("output/")
