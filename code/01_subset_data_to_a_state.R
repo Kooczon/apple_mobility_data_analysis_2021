@@ -14,6 +14,6 @@ source("code/functions/subset_mobility_data_to_state.R")
 for (state_covid_data in c("Arizona", "Florida", "Montana", "Utah",
                            "Georgia")) {
   subset_mobility_data_to_state(
-    input_file_name = "data/raw_data/applemobilitytrends-2021-09-18.csv",
+    input_file_name = "data/raw_data/applemobilitytrends-2021-09-23.csv",
     state_to_subset = state_covid_data)
 }
