@@ -20,7 +20,7 @@ for (subsetted_state in c("Arizona", "Florida", "Montana", "Utah",
                           "Georgia")) {
   tally_cities_counties_of_state(input_file_name =
                                    paste0("output/subsetted_state/",
-                                   "applemobilitytrends-2021-09-18_",
+                                   "applemobilitytrends-2021-09-23_",
                                    subsetted_state,
                                     ".csv"))
 }
