@@ -35,4 +35,7 @@ subset_mobility_data_to_state <- function(input_file_name,
                                       "_",
                                       state_to_subset,
                                       ".csv"))
+
+  return(state_data)
 }
+
