@@ -15,7 +15,7 @@ library("dplyr")
 
 tally_cities_counties_of_state <- function(input_file_name) {
   # read in csv file of the subsetted state data
-  state_data <- read.csv(input_file_name)
+  state_data <- readr::read_csv(input_file_name)
 
   #use dplyr to take the cities, counties, and types of transportation
   # in a chain
@@ -29,9 +29,11 @@ tally_cities_counties_of_state <- function(input_file_name) {
     stop("ERROR: No rows detected. Did you make a mistake?")
   }
   #write csv file of the dplyr chain
-  write.csv(count_cities_counties_by_type,
+  readr::write_csv(count_cities_counties_by_type,
             file = paste0("output/tally_cities_counties_of_state/",
                           tools::file_path_sans_ext(
                             basename(input_file_name)),
                           "_cities_counties.csv"))
+
+  return(count_cities_counties_by_type)
 }
