@@ -28,12 +28,17 @@ subset_mobility_data_to_state <- function(input_file_name,
     stop("ERROR: No rows matching given state name. Did you make a typo?")
   }
 
+  # sub out spaces using underscores so file is named correctly
+  state_no_spaces <- gsub(state_to_subset,
+                          pattern = " ",
+                          replacement = "_")
+
   # save the state data to a new csv file in the output directory
   readr::write_csv(state_data, file = paste0("output/subsetted_state/",
                                       tools::file_path_sans_ext(
                                         basename(input_file_name)),
                                       "_",
-                                      state_to_subset,
+                                      state_no_spaces,
                                       ".csv"))
 
   return(state_data)
