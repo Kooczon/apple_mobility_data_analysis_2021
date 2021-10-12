@@ -17,14 +17,14 @@ knitr::opts_chunk$set(echo = TRUE, message = TRUE)
 state_to_analyze <- "Hawaii"
 
 #sanitizing the state name for output files
-state_no_spaces <- gsub(state_to_analyze, 
+state_no_spaces <- gsub(state_to_analyze,
                         pattern = " ",
                         replacement = "_")
 
 # set the name of the global data to use
 global_file_to_process <- "data/raw_data/applemobilitytrends-2021-09-23.csv"
 
-# extract core name for output file naming use 
+# extract core name for output file naming use
 core_name <- tools::file_path_sans_ext(basename(global_file_to_process))
 
 ```
@@ -101,7 +101,7 @@ tallied_plot <- ggplot(data = tallied_subset,
        x = "Type of area",
        y = "Number of areas")
 
-ggsave(plot = tallied_plot, 
+ggsave(plot = tallied_plot,
        filename = paste0("output/figures/",
                          core_name,
                          "_",
@@ -140,7 +140,7 @@ timeseries_plot
 
 ```{r plot-histogram-mobility-and-transportation-type}
 # create a histogram of the different transportation types and their
-# mobility data, differentiating them. 
+# mobility data, differentiating them.
 histogram_plot <- ggplot(long_subset, aes(x = relative_mobility)) +
   geom_histogram(color = "white") +
   facet_grid(transportation_type ~ .) +
