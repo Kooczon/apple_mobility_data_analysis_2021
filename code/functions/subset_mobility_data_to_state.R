@@ -43,4 +43,3 @@ subset_mobility_data_to_state <- function(input_file_name,
 
   return(state_data)
 }
-
