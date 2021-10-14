@@ -19,7 +19,7 @@ subset_data_wide_to_long <- function(input_state_file) {
 
   #change to long format data
   state_data_long <- subsetted_state %>%
-    pivot_longer(
+    tidyr::pivot_longer(
     cols = starts_with("20"),
     names_to = "date",
     names_prefix = "X",
