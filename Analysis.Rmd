@@ -158,7 +158,7 @@ ggsave(plot = histogram_plot,
                          core_name,
                          "_",
                          state_no_spaces,
-                         "_historgram_plot.png"))
+                         "_histogram_plot.png"))
 
 histogram_plot
 ```
