@@ -12,6 +12,7 @@ It currently uses dplyr to work with some of the tabular data. Eventually, it wi
 
 ### Change Log
 
+* 2021-11-22: Finalized bash script and created the output file
 * 2021-11-01: Created a new bash script to process sequences
 * 2021-10-25: Parameterize Rmd and add bash script to drive knitting
 * 2021-10-11: Finished the Rmd file for the project 
