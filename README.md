@@ -12,7 +12,9 @@ It currently uses dplyr to work with some of the tabular data. Eventually, it wi
 
 ### Change Log
 
-* 2021-10-25: Parameterize Rmd annd add bash script to drive knitting
+* 2021-11-22: Finalized bash script and created the output file
+* 2021-11-01: Created a new bash script to process sequences
+* 2021-10-25: Parameterize Rmd and add bash script to drive knitting
 * 2021-10-11: Finished the Rmd file for the project 
 * 2021-10-06: Started an R Markdown file for this R project
 * 2021-10-06: Create a new function that changes the subset data from wide format to long format
