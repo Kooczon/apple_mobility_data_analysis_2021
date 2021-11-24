@@ -7,7 +7,7 @@ bibliography: references.bib
 params:
   state: "Hawaii"
   data: "data/raw_data/applemobilitytrends-2021-09-23.csv"
-  seqdata: "output/sorted_seq_data/parsed_covid_data_2021_10_24.txt"	
+  seqdata: "output/sorted_seq_data/sequence_summary_tally_of_countries.txt"	
 ---
 
 ```{r setup, include=FALSE}
