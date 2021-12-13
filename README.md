@@ -11,7 +11,7 @@ https://covid19.apple.com/mobility
 It currently uses dplyr to work with some of the tabular data. Eventually, it will also include use of ggplot2 to visualize the dataset.
 
 ### Change Log
-
+* 2021-12-12: Merged Makefile Branch into main
 * 2021-11-23: Created a Makefile, Changed the process_seq script.
 * 2021-11-22: Finalized bash script and created the output file
 * 2021-11-01: Created a new bash script to process sequences
